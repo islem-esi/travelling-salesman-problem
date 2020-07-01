@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox layoutY="45.0" prefHeight="675.0" prefWidth="196.0" style="-fx-background-color: darkblue;">
+         <children>
+            <VBox prefHeight="50.0" prefWidth="196.0">
+               <children>
+                  <Label prefHeight="43.0" prefWidth="196.0" text="Actions" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT Bold" size="18.0" />
+                     </font>
+                     <padding>
+                        <Insets left="12.0" />
+                     </padding>
+                  </Label>
+                  <Separator prefWidth="200.0" style="-fx-background-color: cyan;" />
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="37.0" prefWidth="196.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="72.0" text="Add node" textFill="#a3f1ff">
+                           <font>
+                              <Font name="Book Antiqua Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <JFXButton buttonType="RAISED" contentDisplay="CENTER" prefHeight="30.0" prefWidth="30.0" ripplerFill="#e16b6b" style="-fx-background-color: white; -fx-background-radius: 10em;" text="1" />
+                     </children>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </VBox>
+         </children>
+      </VBox>
+      <HBox layoutY="-8.0" prefHeight="53.0" prefWidth="1400.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

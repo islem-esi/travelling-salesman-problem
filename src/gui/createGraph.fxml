@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CreateController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1370.0" spacing="15.0" style="-fx-background-color: darkgreen;">
+         <children>
+            <Label prefHeight="50.0" prefWidth="522.0" text="Problème du voyageur de commerce" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="50.0" prefWidth="357.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="157.0" text="Nombre de villes" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="order" alignment="BOTTOM_CENTER" focusColor="#a356eb" prefHeight="39.0" prefWidth="86.0" style="-fx-text-fill: white;" unFocusColor="#ffff3c">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </JFXTextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="357.0">
+               <children>
+                  <Label prefHeight="50.0" prefWidth="129.0" text="Ville de départ" textFill="WHITE">
+                     <font>
+                        <Font name="Bell MT" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="startpoint" focusColor="#4973f2" style="-fx-text-color: white;" unFocusColor="#ffe419" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="687.0" />
+         </children>
+      </HBox>
+      <HBox layoutY="690.0" prefHeight="50.0" prefWidth="1370.0" style="-fx-background-color: black;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="48.0" prefWidth="127.0" text="Selected" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nodeNum" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="127.0" textFill="WHITE">
+                     <font>
+                        <Font name="Agency FB Bold" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1298.0">
+               <children>
+                  <JFXButton fx:id="solve" text="Aller à la solution" textFill="#00fc19">
+                     <font>
+                        <Font name="Agency FB Bold" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <ScrollPane layoutY="50.0" prefHeight="641.0" prefWidth="1370.0">
+        <content>
+          <AnchorPane fx:id="drawArea" minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="2000.0" style="-fx-text-color: white;">
+               <children>
+                  <Rectangle fx:id="e1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="41.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="257.0" />
+                  <VBox fx:id="h1" layoutX="41.0" layoutY="199.0" prefHeight="200.0" prefWidth="257.0" spacing="5.0" style="-fx-border-color: darkgreen;">
+                     <children>
+                        <HBox prefHeight="36.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="73.0" text="Cout : " textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="coutExacte" prefHeight="34.0" prefWidth="59.0" style="-fx-text-alignment: center;" text="1" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="34.0" prefWidth="114.0" text="Chemin :" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pathExacte1" prefHeight="34.0" prefWidth="239.0" text="1-2-3-4-5-6-7-8-9-10-11-12-13-14" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pathExacte2" prefHeight="34.0" prefWidth="240.0" text="1-2-3-4-5-6-7-8-9-10-11-12-13-14" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="15.0" layoutY="10.0" prefHeight="36.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="131.0" text="Temps exécution :" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="texec" prefHeight="34.0" prefWidth="59.0" style="-fx-text-alignment: center;" text="1" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+                  <Label fx:id="e3" layoutX="41.0" layoutY="143.0" prefHeight="39.0" prefWidth="256.0" style="-fx-border-color: darkgreen; -fx-background-color: white;" text="Solution exacte" textFill="#4c6b4b">
+                     <font>
+                        <Font name="Agency FB Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </Label>
+                  <Label fx:id="e4" layoutX="973.0" layoutY="143.0" prefHeight="39.0" prefWidth="256.0" style="-fx-border-color: darkgreen; -fx-background-color: white;" text="Solution approximative" textFill="#47654c">
+                     <font>
+                        <Font name="Agency FB Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fx:id="e2" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="973.0" layoutY="199.0" stroke="BLACK" strokeType="INSIDE" width="257.0" />
+                  <VBox fx:id="h2" layoutX="973.0" layoutY="199.0" prefHeight="200.0" prefWidth="257.0" spacing="5.0" style="-fx-border-color: darkgreen;">
+                     <children>
+                        <HBox prefHeight="36.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="77.0" text="Cout : " textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="approximation" prefHeight="34.0" prefWidth="59.0" style="-fx-text-alignment: center;" text="1" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Label prefHeight="34.0" prefWidth="94.0" text="Chemin :" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pathapproxim1" prefHeight="34.0" prefWidth="239.0" text="1-2-3-4-5-6-7-8-9-10-11-12-13-14" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="pathapproxim2" prefHeight="34.0" prefWidth="240.0" text="1-2-3-4-5-6-7-8-9-10-11-12-13-14" textFill="#4918f2">
+                           <font>
+                              <Font name="Agency FB Bold" size="20.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="15.0" layoutY="10.0" prefHeight="36.0" prefWidth="257.0">
+                           <children>
+                              <Label prefHeight="34.0" prefWidth="136.0" text="Temps exécution :" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="texec2" prefHeight="34.0" prefWidth="59.0" style="-fx-text-alignment: center;" text="1" textFill="#4918f2">
+                                 <font>
+                                    <Font name="Agency FB Bold" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </children></AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
